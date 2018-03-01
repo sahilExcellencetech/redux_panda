@@ -2,14 +2,14 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import style from 'antd/dist/antd.css';
 import styles from './index.css';
-import {store} from './redux/userDetailReducer';
+import {store} from './store/store';
 import {Provider} from 'react-redux';
 import styl from './HomePage.css';
-import RoutesApp from './App';
+import routes from './App';
 
 const jsx=(
     <Provider store={store}>
-        <RoutesApp />
+        {routes}
     </Provider>
 );
 ReactDOM.render(jsx, document.getElementById('root'));

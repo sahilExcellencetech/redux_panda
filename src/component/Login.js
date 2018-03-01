@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Input, Button, notification } from 'antd';
 import {Link} from 'react-router-dom';
-import {store,addUserDetail,} from '../redux/userDetailReducer';
-import List from '../redux/onScreen';
+import {store} from '../store/store';
+import {addUserDetail} from '../action/action';
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -27,7 +27,6 @@ class NormalLoginForm extends React.Component {
     <div id="container">
 
       <div id="content">
-      <List/>
       <h1>Login</h1>
 
       <Form onSubmit={this.handleSubmit} className="login-form">

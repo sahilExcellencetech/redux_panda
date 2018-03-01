@@ -1,13 +1,12 @@
 import React from 'react';
 import { Col, Icon} from 'antd';
 import {Link} from 'react-router-dom';
-import List from '../redux/onScreen';
+import List from '../container/container';
 
 class Profile extends React.Component {
 render(){
     return(
         <div id="containerHome" >
-        <div id="text-profile"> asd asd<div id="profile-icon"><Icon type="picture" /></div></div>
         <div id="text-profile"> <List/><div id="profile-icon"><Icon type="picture" /></div></div>
             <div id="content-profile">
            <div id="profile-content"> <Link to="" id="link">My Website</Link></div>
