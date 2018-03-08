@@ -11,14 +11,14 @@ class SignalmentForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Distance:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].Distance,
-      Pension:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].Pension,
-      Qualification:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].Qualification,
-      Working_Shift:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].Working_Shift,
-      facilities:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].facilities,
-      driving_license:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].driving_license,
-      own_car:props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].own_car,
-      Location: props.signalmentDetails[props.signalmentDetails.length-1] && props.signalmentDetails[props.signalmentDetails.length-1].Location
+      Distance: props.signalmentDetails.Distance,
+      Pension: props.signalmentDetails.Pension,
+      Qualification: props.signalmentDetails.Qualification,
+      Working_Shift: props.signalmentDetails.Working_Shift,
+      facilities: props.signalmentDetails.facilities,
+      driving_license: props.signalmentDetails.driving_license,
+      own_car: props.signalmentDetails.own_car,
+      Location: props.signalmentDetails.Location
     };
   }
   onChange = (defauUnChecked)=> {
