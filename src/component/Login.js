@@ -1,8 +1,8 @@
-
 import React from 'react';
-import { Form,Col, Input, Button, notification } from 'antd';
+import { Form, Input, Button, notification } from 'antd';
 import {Link} from 'react-router-dom';
-
+import {store} from '../store/store';
+import {addUserDetail} from '../action/action';
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -11,6 +11,8 @@ class NormalLoginForm extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         this.props.history.push('/homepage');
+        store.dispatch(addUserDetail(values));
+        console.log(store.getState());
 
         notification.open({
           message: 'Successfully Logged In',
@@ -23,6 +25,7 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
     <div id="container">
+
       <div id="content">
       <h1>Login</h1>
 
